@@ -1,6 +1,6 @@
 ## Project Overview
 
-Anyone can access directly and ca generate random quotes using this random quotes generator. A simple web application built with React.js that generates random quotes. It utilizes a public API to fetch quotes and displays them on the page.
+Anyone can access directly and can generate random quotes using this random quotes generator. A simple web application(SPA) built with React.js. It utilizes a public API to fetch quotes and displays them on the page.
 
 ## Features
 
@@ -43,6 +43,7 @@ On Your Network: https://himashawijewickrama.github.io/random-quotes-generator
 
 ## Screen Shots
 
+![ss](https://github.com/user-attachments/assets/721532dd-0a61-4199-9298-cfd645e87e52)
 
 
 
