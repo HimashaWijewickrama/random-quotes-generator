@@ -1,48 +1,95 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background: #642b73; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #c6426e,
-    #642b73
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #c6426e,
-    #642b73
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #642b73;
+  background: -webkit-linear-gradient(to right, #c6426e, #642b73);
+  background: linear-gradient(to right, #c6426e, #642b73);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.quote-card {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  width: 870px;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.card-body {
+  height: 350px;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: rgb(242, 240, 240);
+  text-align: center;
+}
+.quote-text {
+  font-family: "Bad Script", system-ui;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 10px;
+}
+.quote-card-header {
+  text-align: center;
+  font-family: "Cinzel", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 30px;
+  background-color: rgb(242, 240, 240);
+}
+.center {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.generate-btn {
+  width: 300px;
+  height: 60px;
+  cursor: pointer;
+  border: 1px solid linear-gradient(to right, #c6426e, #642b73);
+  outline: none;
+  transition: 1s ease-in-out;
+  box-shadow: 0 16px 24px 0 transparent;
+  position: relative;
+  border-radius: 5px;
+}
+
+.border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.generate-btn:hover {
+  transition: 1s ease-in-out;
+  background: #c6426e;
+}
+
+.generate-btn:hover .border {
+  stroke-dashoffset: -480;
+}
+
+.generate-btn span {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Cinzel", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
 }
