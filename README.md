@@ -6,7 +6,7 @@ Anyone can access directly and can generate random quotes using this random quot
 
 - Anyone can access to the application directly
 - Anyone can generate random quotes for a good day by clicking `Generate New Quote` button
-- User friendly interface
+- User friendly interface and responsive design for any device
 
 ## Used Packages and Dependencies
 
