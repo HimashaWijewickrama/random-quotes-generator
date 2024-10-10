@@ -7,60 +7,69 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .quote-card {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(0.5px);
   -webkit-backdrop-filter: blur(0.5px);
-  width: 870px;
-  height: 500px;
+  width: 80%;
+  max-width: 870px;
+  height: auto;
+  min-height: 400px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .card-body {
-  height: 350px;
+  max-height: 300px;
   overflow-y: auto;
   padding: 20px;
   background-color: rgb(242, 240, 240);
   text-align: center;
 }
+
 .quote-text {
   font-family: "Bad Script", system-ui;
   font-weight: 600;
   font-style: normal;
   margin-top: 10px;
+  font-size: 1.4rem;
 }
+
 .quote-card-header {
   text-align: center;
   font-family: "Cinzel", system-ui;
-  font-optical-sizing: auto;
   font-weight: 700;
-  font-style: bold;
-  font-size: 30px;
+  font-size: 2rem;
   background-color: rgb(242, 240, 240);
+  padding: 10px;
 }
+
 .center {
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .generate-btn {
-  width: 300px;
-  height: 60px;
+  width: 60%;
+  max-width: 300px;
+  height: 50px;
   cursor: pointer;
-  border: 1px solid linear-gradient(to right, #c6426e, #642b73);
+  border: none;
   outline: none;
-  transition: 1s ease-in-out;
   box-shadow: 0 16px 24px 0 transparent;
   position: relative;
   border-radius: 5px;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .border {
@@ -75,7 +84,6 @@
 }
 
 .generate-btn:hover {
-  transition: 1s ease-in-out;
   background: #c6426e;
 }
 
@@ -85,11 +93,48 @@
 
 .generate-btn span {
   color: white;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 1.2rem;
   text-align: center;
   font-family: "Cinzel", system-ui;
-  font-optical-sizing: auto;
   font-weight: 700;
-  font-style: bold;
+}
+
+/* Media queries to make responsive */
+
+@media (max-width: 768px) {
+  .quote-card {
+    width: 90%;
+  }
+
+  .quote-card-header {
+    font-size: 1.8rem;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+  }
+
+  .generate-btn {
+    width: 80%;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-card {
+    width: 95%;
+  }
+
+  .quote-card-header {
+    font-size: 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1rem;
+  }
+
+  .generate-btn {
+    width: 90%;
+    height: 40px;
+  }
 }

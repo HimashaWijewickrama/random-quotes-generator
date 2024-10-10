@@ -48,36 +48,29 @@ export default function Home() {
 
     fetchQuote();
   };
+
   return (
     <header className="App-header">
       <Card
         className="quote-card"
         style={{ color: bgColor, border: "5px solid #642b73" }}
       >
-        <Card.Header
-          className="quote-card-header"
-          style={{
-            color: bgColor,
-          }}
-        >
+        <Card.Header className="quote-card-header" style={{ color: bgColor }}>
           Quote For A Good Day
         </Card.Header>
         <Card.Body className="card-body" style={{ opacity: 0.9 }}>
           <blockquote className="blockquote mb-0">
-            <br />
             {error ? (
               <span>Error: {error}</span>
             ) : quote ? (
               <>
-                <BsChatQuote size={70} />
-
+                <BsChatQuote size={50} />
                 <p className="quote-text">{quote.quote}</p>
-                <br />
                 <footer
                   className="blockquote-footer"
                   style={{ color: bgColor }}
                 >
-                  <strong>{quote.author} </strong>
+                  <strong>{quote.author}</strong>{" "}
                   <cite title="Source Title">from API Ninjas</cite>
                 </footer>
               </>
@@ -96,20 +89,21 @@ export default function Home() {
             style={{ backgroundColor: bgColor }}
           >
             <svg
-              width="300px"
-              height="60px"
-              viewBox="0 0 300 60"
+              width="100%"
+              height="auto"
+              viewBox="0 0 300 50"
               className="border"
             >
               <polyline
-                points="299,1 299,59 1,59 1,1 299,1"
+                points="299,1 299,49 1,49 1,1 299,1"
                 className="bg-line"
               />
               <polyline
-                points="299,1 299,59 1,59 1,1 299,1"
+                points="299,1 299,49 1,49 1,1 299,1"
                 className="hl-line"
               />
             </svg>
+
             <span>Generate New Quote</span>
           </button>
         </div>
